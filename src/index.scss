@@ -1,0 +1,16 @@
+@import "./utils/palette.scss";
+
+html {
+  height: 100vh;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  background: linear-gradient(white, #80808078);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}

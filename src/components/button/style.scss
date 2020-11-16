@@ -1,0 +1,26 @@
+@import "../../utils/palette.scss";
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 50px;
+  width: 100%;
+
+  button {
+    background: $red_primary;
+    border: none;
+    padding: 10px 50px;
+    border-radius: 20px;
+    color: white;
+    font-size: 1.2rem;
+    box-shadow: -3px 4px 6px 0px #5d5b5bd1;
+
+    &:hover {
+      background: $red_secondary;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+}

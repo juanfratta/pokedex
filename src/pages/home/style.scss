@@ -1,0 +1,52 @@
+@import "../../utils/palette.scss";
+
+.home-container {
+  height: 90vh;
+  width: 90vw;
+  background: linear-gradient($aqua_primary, $blue_aqua, $blue_secondary);
+  border-radius: 5px;
+  position: relative;
+  margin: 0 auto;
+
+  .logo {
+    img {
+      width: 200px;
+      margin: 10px;
+    }
+  }
+
+  .content-ppl {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    h2 {
+      width: 35%;
+      margin: 20px;
+      color: $titles;
+    }
+    img {
+      width: 22%;
+      height: auto;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .logo {
+      img {
+        width: 150px;
+      }
+    }
+    .content-ppl {
+      flex-wrap: wrap-reverse;
+      h2 {
+        width: 100%;
+        font-size: 1.3rem;
+        text-align: center;
+      }
+      img {
+        width: 200px;
+      }
+    }
+  }
+}
