@@ -1,12 +1,14 @@
 import React from "react";
+import Card from "../card";
 import "./styles.scss";
 
-const PokemonsList = (pokemons) => {
+
+const PokemonsList = (props) => {
+  console.log(props)
   return (
     <div className="main-container">
-      {console.log(pokemons.data)}
-      {pokemons.data.map((pokemon) => (
-        <div key={pokemon.name}>{pokemon.name}</div>
+      {props.loading ? "loading": props.data.map((pokemon) => (
+        <Card key={pokemon.name} data={pokemon}/>
       ))}
     </div>
   );
