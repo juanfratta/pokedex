@@ -1,6 +1,6 @@
 import { React, useState, useEffect } from "react";
 import Paginate from "../../components/paginate";
-import PokemonsList from "../../components/pokemonsList";
+import PokemonsList from "../pokemonsList";
 
 const PokemonsListContainer = () => {
 
@@ -12,8 +12,8 @@ const PokemonsListContainer = () => {
 
   useEffect(() => {
     fetch(URL)
-      .then((res) => res.json())
       .then(setLoading(true))
+      .then((res) => res.json())
       .then(data => {
         setTimeout(()=>{setLoading(false)},500)
         setPokemons(data.results)
