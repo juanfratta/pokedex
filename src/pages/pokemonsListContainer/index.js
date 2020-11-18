@@ -1,44 +1,70 @@
-import { React, useState, useEffect } from "react";
-import Paginate from "../../components/paginate";
-import PokemonsList from "../pokemonsList";
+import React, { useEffect, useReducer } from 'react';
+import Paginate from '../../components/paginate';
+import PokemonsList from '../pokemonsList';
 
-const PokemonsListContainer = () => {
+const initialState = {
+    loading: true,
+    data: [],
+    error: '',
+    url: 'https://pokeapi.co/api/v2/pokemon/?limit=5&offset=0'
+}
+const reducer = (state, action) => {
+    switch (action.type) {
+        case 'FETCH_SUCCESS':
+            return {
+                loading: false,
+                data: action.payload,
+                error: ''
+            }
+        case 'FETCH_FAILURE':
+            return {
+                loading: false,
+                data: [],
+                error: 'Hubo un error'
+            }
+        case 'SET_PREV_URL':
+            return {
+                ...state,
+                url: action.payload
+            }
+        case 'SET_NEXT_URL':
+            return {
+                ...state,
+                url: action.payload
+            }
+        default:
+            return state;
+    }
+}
 
-  const [pokemons, setPokemons] = useState([])
-  const [URL, setUrl] = useState("https://pokeapi.co/api/v2/pokemon/?limit=5&offset=0")
-  const [nextUrl, setNextUrl] = useState('')
-  const [prevUrl, setPrevUrl] = useState('')
-  const [loading, setLoading] = useState(null)
+const ListoPokemonContainer = () => {
 
-  useEffect(() => {
-    fetch(URL)
-      .then(setLoading(true))
-      .then((res) => res.json())
-      .then(data => {
-        setTimeout(()=>{setLoading(false)},500)
-        setPokemons(data.results)
-        setNextUrl(data.next)
-        setPrevUrl(data.previous)
-      })
-  }, [URL]);
+    const [state, dispatch] = useReducer(reducer, initialState)
 
-  function getPrevPage() {
-    setUrl(prevUrl)
-  }
+    useEffect(() => {
+        fetch(state.url)
+            .then(response => response.json())
+            .then(response => dispatch({ type: 'FETCH_SUCCESS', payload: response }))
+            .catch(error => ({ type: 'FETCH_FAILURE' }))
+    }, [state.url])
 
-  function getNextPage() {
-    setUrl(nextUrl)
-  }
-  return <div>
-    <PokemonsList
-    data={pokemons}
-    loading={loading}
-    />
-    <Paginate
-      getPrevPage={prevUrl ? getPrevPage : null}
-      getNextPage={nextUrl ? getNextPage : null}
-      />
-  </div>;
+    const getPrevPage = () => (dispatch({ type: 'SET_PREV_URL', payload: state.data.previous }))
+    const getNextPage = () => (dispatch({ type: 'SET_NEXT_URL', payload: state.data.next }))
+
+    return (
+        <div>
+            <PokemonsList
+                loading={state.loading}
+                pokemons={state.data.results}
+                error={state.error}
+            />
+
+            <Paginate
+                getPrevPage={state.data.previous ? getPrevPage : null}
+                getNextPage={state.data.next ? getNextPage : null}
+            />
+        </div>
+    );
 };
 
-export default PokemonsListContainer;
+export default ListoPokemonContainer;
