@@ -1,0 +1,24 @@
+.pokeball {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.5;
+  img {
+    width: 40%;
+    max-width: 200px;
+    animation-name: rotation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    @keyframes rotation {
+      0% {
+        transform: rotate(0deg);
+      }
+      50% {
+        transform: rotate(720deg);
+      }
+    }
+  }
+}

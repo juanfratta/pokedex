@@ -3,7 +3,7 @@ import "./style.scss";
 
 const Button = ({ children }) => {
   return (
-    <div className="button-container">
+    <div className='button-container'>
       <button>{children}</button>
     </div>
   );
