@@ -20,30 +20,37 @@ const Card = (props) => {
                   src={pokemon.sprites.front_default}
                   alt={`front-${name}`}
                 />
+                <div className="card-front-footer">
+                  <p>
+                    {pokemon.types.map((typeObj) => (
+                      <span className="card-type" key={typeObj.type.name}>
+                        {` ${typeObj.type.name} `}
+                      </span>
+                    ))}
+                  </p>
+                </div>
               </div>
             </div>
             <div className="card-back">
-              <img
-                loadin="lazy"
-                src={pokemon.sprites.back_default}
-                alt={`back-${name}`}
-              />
               <div className="card-back-footer">
-                <p>Weight: {pokemon.weight}</p>
-                <p>
-                  Type:
-                  {pokemon.types.map((typeObj) => (
-                    <span key={typeObj.type.name}>{typeObj.type.name} </span>
+                <div>
+                  <p>Weight: {pokemon.weight}</p>
+                  <p>
+                    Abilities:
+                    {pokemon.abilities.map((typeObj) => (
+                      <span key={typeObj.ability.name}>
+                        {` ${typeObj.ability.name} `}
+                      </span>
+                    ))}
+                  </p>
+                </div>
+                <div className="card-back-footer-stats">
+                  {pokemon.stats.map((typeObj) => (
+                    <p
+                      key={typeObj.stat.name}
+                    >{`${typeObj.stat.name}: ${typeObj.base_stat}`}</p>
                   ))}
-                </p>
-                <p>
-                  Abilities:
-                  {pokemon.abilities.map((typeObj) => (
-                    <span key={typeObj.ability.name}>
-                      {typeObj.ability.name}
-                    </span>
-                  ))}
-                </p>
+                </div>
               </div>
             </div>
           </div>

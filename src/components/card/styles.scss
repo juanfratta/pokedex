@@ -30,6 +30,17 @@
     .card-front {
       background-color: rgb(255, 255, 255);
       color: $titles;
+
+      .card-front-footer {
+        font-size: 0.8rem;
+        .card-type {
+          background: $blue_aqua;
+          color: white;
+          border-radius: 5px;
+          padding: 5px;
+          margin: 2px;
+        }
+      }
     }
 
     .card-back {
@@ -43,6 +54,10 @@
         width: 90%;
         margin: 0 auto;
         text-align: left;
+
+        .card-back-footer-stats {
+          color: $text;
+        }
       }
     }
   }
