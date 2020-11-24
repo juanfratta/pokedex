@@ -4,7 +4,7 @@ import "./app.scss";
 import Home from "./pages/home";
 import PokemonsListContainer from "./pages/pokemonsListContainer";
 
-const App = () => (
+const App = ({ t }) => (
   <div className="app">
     <BrowserRouter>
       <Switch>

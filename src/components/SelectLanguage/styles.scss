@@ -1,0 +1,19 @@
+@import "../../utils/palette.scss";
+
+.select-language-container {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+
+  select {
+    background: none;
+    border: none;
+    outline: none;
+
+    option {
+      background: white;
+      color: $titles;
+      outline: none;
+    }
+  }
+}

@@ -10,6 +10,12 @@
   border-radius: 5px;
   position: relative;
 
+  .logo-container {
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+  }
+
   .pokemons-container {
     height: 90%;
     display: flex;
