@@ -4,13 +4,16 @@ import logo from "../../images/logo.svg";
 import pikachu from "../../images/pikachu.png";
 import Button from "../../components/button";
 import { Link } from "react-router-dom";
+import Logo from "../../components/logo";
 
 const Home = () => {
   return (
     <div className="home-container">
-      <div className="logo">
+      <Logo />
+
+      {/* <div className="logo">
         <img src={logo} alt="pokemon-logo" />
-      </div>
+      </div> */}
       <div className="content-ppl">
         <h2>Welcome to the Pokedex, a complete guide of pokemons...</h2>
         <img src={pikachu} alt="pikachu" />
