@@ -34,22 +34,13 @@
       color: $titles;
 
       .card-front-footer {
-        font-size: 0.8rem;
-        line-height: 30px;
         text-align: left;
         padding: 5px;
-
-        .card-tag {
-          width: 70%;
-          background: lightsteelblue;
-          color: white;
-          border-radius: 5px;
-          padding: 7px;
-          margin: 2px;
-        }
-
-        .card-list {
-          list-style: none;
+        font-size: 0.9rem;
+        font-weight: 300;
+        margin: 5px;
+        p {
+          border-bottom: 1px solid lightgray;
         }
       }
     }

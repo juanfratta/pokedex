@@ -3,21 +3,20 @@
 .home-container {
   height: 90vh;
   width: 90vw;
-  //background: linear-gradient($aqua_primary, $blue_aqua, $blue_secondary);
   background: url("../../images/background-page.jpg");
   background-size: cover;
+  background-position-x: center;
+  background-position-y: center;
   border-radius: 5px;
   position: relative;
   margin: 0 auto;
 
-  .logo {
-    img {
-      width: 200px;
-      margin: 10px;
-    }
+  .logo-container {
+    height: 10%;
   }
 
   .content-ppl {
+    height: 80%;
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -33,14 +32,9 @@
     }
   }
 
-  @media (max-width: 480px) {
-    .logo {
-      img {
-        width: 150px;
-      }
-    }
+  @media (max-width: 600px) {
     .content-ppl {
-      flex-wrap: wrap-reverse;
+      flex-wrap: wrap;
       h2 {
         width: 100%;
         font-size: 1.3rem;

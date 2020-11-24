@@ -37,7 +37,7 @@ const Card = (props) => {
                   <p>
                     Abilities:
                     {pokemon.abilities.map((typeObj) => (
-                      <span className="card-list" key={typeObj.ability.name}>
+                      <span key={typeObj.ability.name}>
                         {` ${typeObj.ability.name} `}
                       </span>
                     ))}
