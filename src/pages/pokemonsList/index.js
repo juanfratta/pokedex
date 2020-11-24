@@ -1,6 +1,5 @@
 import React from "react";
 import CardContainer from "../../components/cardContainer";
-import Pokeball from "../../components/pokeball";
 import "./styles.scss";
 
 const PokemonsList = (props) => {

@@ -3,7 +3,7 @@
 
 .card-container {
   width: 200px;
-  height: 200px;
+  height: 350px;
   perspective: 1000px;
 
   .card-inner {
@@ -25,6 +25,7 @@
       height: 100%;
       -webkit-backface-visibility: hidden; /* Safari */
       backface-visibility: hidden;
+      border-radius: 5px;
     }
 
     .card-front {
@@ -33,31 +34,37 @@
 
       .card-front-footer {
         font-size: 0.8rem;
-        .card-type {
-          background: $blue_aqua;
+        line-height: 30px;
+        text-align: left;
+        padding: 5px;
+
+        .card-tag {
+          width: 70%;
+          background: lightsteelblue;
           color: white;
           border-radius: 5px;
-          padding: 5px;
+          padding: 7px;
           margin: 2px;
+        }
+
+        .card-list {
+          list-style: none;
         }
       }
     }
 
     .card-back {
-      background-color: $blue_primary;
+      background-color: $blue_aqua;
       color: white;
       font-size: 0.7rem;
       line-height: 0.7rem;
       transform: rotateY(180deg);
 
-      .card-back-footer {
+      .card-back-info {
         width: 90%;
         margin: 0 auto;
         text-align: left;
-
-        .card-back-footer-stats {
-          color: $text;
-        }
+        color: $text;
       }
     }
   }
