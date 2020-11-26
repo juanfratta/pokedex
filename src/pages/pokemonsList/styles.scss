@@ -26,6 +26,14 @@
   }
 
   .loading {
-    color: white;
+    color: $titles;
+  }
+}
+
+@media (max-width: 600px) {
+  .main-container {
+    height: 100vh;
+    width: 100vw;
+    border-radius: 0;
   }
 }

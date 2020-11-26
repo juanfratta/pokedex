@@ -1,5 +1,6 @@
 {
-  "title": "Bienvenido a la Pokedex, una completa guía con todos los pokemons y sus specs",
+  "title": "Bienvenido a la Pokedex",
+  "subtitle": "una completa guía con todos los pokemons y sus specs",
   "weight": "Peso",
   "type": "Tipo",
   "abilities": "Habilidades",

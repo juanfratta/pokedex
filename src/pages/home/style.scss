@@ -1,4 +1,5 @@
 @import "../../utils/palette.scss";
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,500,700,900,400italic,700italic,900italic");
 
 .home-container {
   height: 90vh;
@@ -10,6 +11,7 @@
   border-radius: 5px;
   position: relative;
   margin: 0 auto;
+  overflow: hidden;
 
   .logo-container {
     height: 10%;
@@ -22,28 +24,91 @@
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    margin: 0 20px;
 
-    h2 {
-      width: 35%;
-      margin: 20px;
-      color: $titles;
+    .text-ppl {
+      font: 16px/1.25 "Raleway", sans-serif;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      float: left;
+      justify-content: center;
+      padding: 1em;
+      width: 100%;
+
+      h1 {
+        animation: text-shadow 4s ease-in-out 2;
+        font-size: 2em;
+        font-weight: 900;
+        line-height: 1;
+        margin: 0;
+
+        &:hover {
+          animation-play-state: paused;
+        }
+
+        @keyframes text-shadow {
+          0% {
+            transform: translateY(0);
+            text-shadow: 0 0 0 #0c2ffb, 0 0 0 #2cfcfd, 0 0 0 #fb203b,
+              0 0 0 #fefc4b;
+          }
+
+          20% {
+            transform: translateY(-1em);
+            text-shadow: 0 0.125em 0 #0c2ffb, 0 0.25em 0 #2cfcfd,
+              0 -0.125em 0 #fb203b, 0 -0.25em 0 #fefc4b;
+          }
+
+          40% {
+            transform: translateY(0.5em);
+            text-shadow: 0 -0.0625em 0 #0c2ffb, 0 -0.125em 0 #2cfcfd,
+              0 0.0625em 0 #fb203b, 0 0.125em 0 #fefc4b;
+          }
+
+          60% {
+            transform: translateY(-0.25em);
+            text-shadow: 0 0.03125em 0 #0c2ffb, 0 0.0625em 0 #2cfcfd,
+              0 -0.03125em 0 #fb203b, 0 -0.0625em 0 #fefc4b;
+          }
+
+          80% {
+            transform: translateY(0);
+            text-shadow: 0 0 0 #0c2ffb, 0 0 0 #2cfcfd, 0 0 0 #fb203b,
+              0 0 0 #fefc4b;
+          }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          * {
+            animation: none !important;
+            transition: none !important;
+          }
+        }
+      }
+
+      p {
+        color: $titles;
+        font-weight: 500;
+      }
     }
     img {
       width: 22%;
       height: auto;
     }
   }
+}
 
-  @media (max-width: 600px) {
+@media (max-width: 600px) {
+  .home-container {
+    height: 100vh;
+    width: 100vw;
+    border-radius: 0;
     .content-ppl {
       flex-wrap: wrap;
-      h2 {
-        width: 100%;
-        font-size: 1.3rem;
-        text-align: center;
-      }
+
       img {
-        width: 200px;
+        width: 50%;
       }
     }
   }

@@ -15,7 +15,10 @@ const Home = ({ t }) => {
         <SelectLanguage />
       </div>
       <div className="content-ppl">
-        <h2>{t("title")}</h2>
+        <div className="text-ppl">
+          <h1>{t("title")}</h1>
+          <p>{t("subtitle")}</p>
+        </div>
         <img src={pikachu} alt="pikachu" />
       </div>
       <Link to={"/all-pokemons"}>
