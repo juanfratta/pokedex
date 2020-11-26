@@ -1,5 +1,5 @@
 @import "../../utils/palette.scss";
-@import url("https://fonts.googleapis.com/css?family=Raleway:400,500,700,900,400italic,700italic,900italic");
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,900,400italic,700italic,900italic");
 
 .home-container {
   height: 90vh;
@@ -89,7 +89,7 @@
 
       p {
         color: $titles;
-        font-weight: 500;
+        font-weight: 700;
       }
     }
     img {
