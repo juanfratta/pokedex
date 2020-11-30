@@ -3,16 +3,22 @@ import i18n from "../../utils/i18n";
 import { withNamespaces } from "react-i18next";
 import "./styles.scss";
 
-const SelectLanguage = () => {
+const SelectLanguage = (props) => {
+  const { lng } = props;
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
   };
   return (
     <div className="select-language-container">
-      <select onChange={(e) => changeLanguage(e.target.value)}>
-        <option value="es">ES</option>
-        <option value="en">EN</option>
-      </select>
+      {lng === "es" ? (
+        <button id="english" onClick={() => changeLanguage("en")}>
+          EN
+        </button>
+      ) : (
+        <button id="spanish" onClick={() => changeLanguage("es")}>
+          ES
+        </button>
+      )}
     </div>
   );
 };

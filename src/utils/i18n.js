@@ -3,6 +3,9 @@ import { reactI18nextModule } from "react-i18next";
 import translationEN from "../locales/en/translation.json";
 import translationES from "../locales/es/translation.json";
 
+const userLanguage = navigator.language || navigator.userLanguage;
+const defaultLocale = userLanguage.substring(0, 2);
+
 const resources = {
   en: {
     translation: translationEN,
@@ -14,8 +17,8 @@ const resources = {
 
 i18n.use(reactI18nextModule).init({
   resources,
-  lng: "es",
-
+  lng: defaultLocale,
+  fallbackLng: defaultLocale,
   keySeparator: false,
 
   interpolation: {

@@ -5,8 +5,7 @@ import Button from "./index";
 
 Enzyme.configure({ adapter: new Adapter() });
 
-it("Display button", () => {
+it("Should display a button", () => {
   const wrapper = shallow(<Button />);
-
-  expect();
+  expect(wrapper.containsMatchingElement(<button />)).toBe(true);
 });

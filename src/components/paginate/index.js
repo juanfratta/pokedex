@@ -3,6 +3,7 @@ import "./styles.scss";
 
 const Paginate = (props) => {
   const { getPrevPage, getNextPage } = props;
+
   return (
     <div className="paginate-container">
       <i className="arrow left" onClick={getPrevPage} />

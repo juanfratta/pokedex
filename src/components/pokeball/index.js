@@ -5,7 +5,7 @@ import pokeball from "../../images/pokeball.png";
 const Pokeball = () => {
   return (
     <div className="pokeball">
-      <img src={pokeball} alt="pokeball" />
+      <img src={pokeball} alt="Loading ..." />
     </div>
   );
 };

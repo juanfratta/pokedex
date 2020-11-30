@@ -5,15 +5,18 @@
   align-items: center;
   margin-right: 10px;
 
-  select {
-    background: none;
+  button {
+    padding: 5px;
+    border-radius: 50%;
     border: none;
     outline: none;
+    margin: 3px;
+    color: $titles;
+    font-weight: bold;
+    background: none;
 
-    option {
-      background: white;
-      color: red;
-      outline: none;
+    &:hover {
+      opacity: 0.5;
     }
   }
 }

@@ -6,7 +6,6 @@ import Slider from "../slider";
 import "./styles.scss";
 
 const Card = (props) => {
-  console.log(props);
   const { name, pokemon, loading, error } = props;
   return (
     <div className="card-container">
