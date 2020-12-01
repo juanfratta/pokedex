@@ -9,3 +9,7 @@ it("Should display arrows", () => {
   const wrapper = shallow(<Paginate />);
   expect(wrapper.containsMatchingElement(<i />)).toBe(true);
 });
+it("should trigger functions", () => {
+  const wrapper = shallow(<Paginate />);
+  const prevPage = wrapper.find("button").first();
+});

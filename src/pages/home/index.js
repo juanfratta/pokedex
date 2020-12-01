@@ -5,7 +5,7 @@ import Button from "../../components/button";
 import { Link } from "react-router-dom";
 import Logo from "../../components/logo";
 import { withNamespaces } from "react-i18next";
-import SelectLanguage from "../../components/SelectLanguage";
+import SelectLanguage from "../../components/selectLanguage";
 
 const Home = ({ t }) => {
   return (
