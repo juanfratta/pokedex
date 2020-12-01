@@ -1,5 +1,7 @@
 import React, { useEffect, useReducer } from "react";
 import Paginate from "../../components/paginate";
+import PokemonsList from "../pokemonsList";
+import pokemonsReducer from "../../reducer/pokemonsReducer";
 import {
   FETCH_BEGIN,
   FETCH_FAILURE,
@@ -7,8 +9,6 @@ import {
   SET_NEXT_PAGE,
   SET_PREV_PAGE,
 } from "../../reducer/actions";
-import pokemonsReducer from "../../reducer/pokemonsReducer";
-import PokemonsList from "../pokemonsList";
 
 const initialState = {
   loading: false,

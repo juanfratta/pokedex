@@ -1,6 +1,6 @@
 import React from "react";
-import "./styles.scss";
 import pokeball from "../../images/pokeball.png";
+import "./styles.scss";
 
 const Pokeball = () => {
   return (

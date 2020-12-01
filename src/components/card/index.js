@@ -15,13 +15,16 @@ const Card = (props) => {
           <div>
             <div className="card-front">
               <div>
-                <h3>{name}</h3>
+                <header>
+                  <h3>{name}</h3>
+                </header>
                 <img
                   loading="lazy"
                   src={pokemon.sprites.front_default}
                   alt={`front-${name}`}
                 />
-                <div className="card-front-footer">
+
+                <footer className="card-front-footer">
                   <p>
                     {i18next.t("type")}:
                     {pokemon.types.map((typeObj) => (
@@ -41,7 +44,7 @@ const Card = (props) => {
                       </span>
                     ))}
                   </p>
-                </div>
+                </footer>
               </div>
             </div>
             <div className="card-back">
