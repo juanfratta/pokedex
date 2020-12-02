@@ -21,6 +21,5 @@ Para ejecutar los test actualmente disponibles.
 #### preview
 
 <p align="center">
-  <img src="./public/screenshot.png" width="350" title="screenshot">
   <img src="./public/screenshot.png" width="350" alt="screenshot">
 </p>
