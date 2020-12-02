@@ -1,7 +1,5 @@
 import React from "react";
-import CardContainer from "../../components/cardContainer";
-import Logo from "../../components/logo";
-import SelectLanguage from "../../components/selectLanguage";
+import { CardContainer, Logo, SelectLanguage } from "../../components";
 import "./styles.scss";
 
 const PokemonsList = (props) => {

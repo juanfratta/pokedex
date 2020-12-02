@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Card from "../card";
+import { Card } from "../../components";
 
 const CardContainer = (props) => {
   const { name, url } = props.pokemon;

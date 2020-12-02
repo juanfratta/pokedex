@@ -1,5 +1,5 @@
 import React, { useEffect, useReducer } from "react";
-import Paginate from "../../components/paginate";
+import { Paginate } from "../../components";
 import PokemonsList from "../pokemonsList";
 import pokemonsReducer from "../../reducer/pokemonsReducer";
 import {

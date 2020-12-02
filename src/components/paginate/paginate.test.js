@@ -9,7 +9,16 @@ it("Should display arrows", () => {
   const wrapper = shallow(<Paginate />);
   expect(wrapper.containsMatchingElement(<i />)).toBe(true);
 });
-it("should trigger functions", () => {
+it("should trigger getPervPage", () => {
   const wrapper = shallow(<Paginate />);
-  const prevPage = wrapper.find("button").first();
+  const prevPage = wrapper.find("i").first();
+  prevPage.simulate("click");
+  //verificar como cambia la prop
+});
+
+it("should trigger getNextPage", () => {
+  const wrapper = shallow(<Paginate />);
+  const nextPage = wrapper.find("i").last();
+  nextPage.simulate("click");
+  //verificar como cambia la prop
 });

@@ -1,8 +1,7 @@
 import React from "react";
 import i18next from "i18next";
 import { withNamespaces } from "react-i18next";
-import Pokeball from "../pokeball";
-import Slider from "../slider";
+import { Pokeball, Slider } from "../../components";
 import "./styles.scss";
 
 const Card = (props) => {

@@ -1,9 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { withNamespaces } from "react-i18next";
-import Button from "../../components/button";
-import Logo from "../../components/logo";
-import SelectLanguage from "../../components/selectLanguage";
+import { Button, Logo, SelectLanguage } from "../../components";
 import pikachu from "../../images/pikachu.png";
 import "./style.scss";
 
