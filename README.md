@@ -20,4 +20,7 @@ Para ejecutar los test actualmente disponibles.
 
 #### preview
 
-![Screenshot](screenshot.png)
+<p align="center">
+  <img src="./screenshot.png" width="350" title="screenshot">
+  <img src="./screenshot.png" width="350" alt="screenshot">
+</p>
